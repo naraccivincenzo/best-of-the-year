@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="it">
+<head>
+    <title>Homepage</title>
+</head>
+<body>
+
+<h1 th:text="'The Best of the Years by ' + ${name}"/>
+<a th:href="@{/movies}">Movies List</a>
+<br>
+<a th:href="@{/songs}">Songs List</a>
+
+</body>
+</html>
