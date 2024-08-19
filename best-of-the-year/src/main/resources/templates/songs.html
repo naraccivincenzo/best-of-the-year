@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="it">
+
 <head>
     <meta charset="UTF-8">
-    <title>Songs</title>
+    <title>Movies</title>
 </head>
 <body>
-
+<ul>
+    <nav>
+        <a th:href="@{/}">Homepage</a>
+        <a th:href="@{/movies}">Movies List</a>
+    </nav>
+    <main>
+        <ul>
+            <li th:each="singlesong : ${songs}" th:text="'The ID is ' + ${singlesong.id} + ' and the title is ' + ${singlesong.title}"></li>
+        </ul>
+    </main>
 </body>
 </html>

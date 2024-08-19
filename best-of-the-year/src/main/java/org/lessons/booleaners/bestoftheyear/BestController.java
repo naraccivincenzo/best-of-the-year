@@ -13,7 +13,7 @@ public class BestController {
 
     //mapping time
     @GetMapping("/")
-        public String home(Model model) {
+    public String home(Model model) {
         model.addAttribute("name", "Vincenzo");
         return "home";
     }
@@ -24,7 +24,7 @@ public class BestController {
     }
     @GetMapping("/songs")
     public String songs(Model model) {
-
+        model.addAttribute("songs",getBestSongs());
         return "songs";
     }
 
@@ -35,10 +35,10 @@ public class BestController {
         movies.add(a);
         movies.add(b);
         return movies;
-        }
     }
 
-   /* private ArrayList getBestSongs(){
+
+    private ArrayList getBestSongs(){
         ArrayList songs = new ArrayList();
         Songs c = new Songs(1, "Thuderstruck");
         Songs d = new Songs(2, "Thuder");
@@ -46,4 +46,4 @@ public class BestController {
         songs.add(d);
         return songs;
     }
-}*/
+}
