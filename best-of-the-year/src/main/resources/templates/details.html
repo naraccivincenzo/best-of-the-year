@@ -9,11 +9,10 @@
 <nav>
     <a th:href="@{/}">Homepage</a>
     <a th:href="@{/movies}">Movies List</a>
+    <a th:href="@{/songs}">Songs List</a>
 </nav>
 <main>
-    <ul>
-        <li th:each="singlesong : ${songs}" th:text="'The ID is ' + ${singlesong.id} + ' and the title is ' + ${singlesong.title}"></li>
-    </ul>
+    <p th:text="${title}"></p>
 </main>
 </body>
 </html>

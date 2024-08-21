@@ -6,15 +6,14 @@
     <title>Movies</title>
 </head>
 <body>
-<ul>
-    <nav>
-        <a th:href="@{/}">Homepage</a>
-        <a th:href="@{/songs}">Songs List</a>
-    </nav>
-    <main>
-        <ul>
-            <li th:each="singlemovie : ${movies}" th:text="'The ID is ' + ${singlemovie.id} + ' and the title is ' + ${singlemovie.title}"></li>
-        </ul>
-    </main>
+<nav>
+    <a th:href="@{/}">Homepage</a>
+    <a th:href="@{/songs}">Songs List</a>
+</nav>
+<main>
+    <ul>
+        <li th:each="singlemovie : ${movies}" th:text="'The ID is ' + ${singlemovie.id} + ' and the title is ' + ${singlemovie.title}"></li>
+    </ul>
+</main>
 </body>
 </html>
