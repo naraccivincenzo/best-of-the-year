@@ -2,18 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="it">
 
 <head>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"/>
+
     <meta charset="UTF-8">
     <title>Movies</title>
 </head>
 <body>
-<nav>
-    <a th:href="@{/}">Homepage</a>
-    <a th:href="@{/songs}">Songs List</a>
-</nav>
+<nav th:insert="fragments :: navbar"></nav>
+
 <main>
-    <ul>
-        <li th:each="singlemovie : ${movies}" th:text="'The ID is ' + ${singlemovie.id} + ' and the title is ' + ${singlemovie.title}"></li>
-    </ul>
+    <div class="container-fluid p-2 w-50">
+        <h1 class="text-center">Best Movies</h1>
+
+        <ul class="list-group" th:insert="fragments :: movies"></ul>
+    </div>
 </main>
+
+
+
+<script th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>

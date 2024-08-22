@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="webjars.popper.js" type="repository">
+    <properties maven-id="org.webjars:popper.js:2.11.7" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/popper.js/2.11.7/popper.js-2.11.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
