@@ -2,17 +2,26 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="it">
 
 <head>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"/>
+
     <meta charset="UTF-8">
     <title>Movies</title>
 </head>
 <body>
-<nav>
-    <a th:href="@{/}">Homepage</a>
-    <a th:href="@{/movies}">Movies List</a>
-    <a th:href="@{/songs}">Songs List</a>
-</nav>
+
+<nav th:insert="fragments :: navbar"></nav>
+
 <main>
-    <p th:text="${title}"></p>
+    <div class="container-fluid p-2 w-50">
+    <h1 th:text="${title}" class="text-center"></h1>
+        <p class="p-2 border-black border">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem beatae, culpa deleniti enim et libero nisi placeat quasi quod unde veritatis. Fuga iste labore molestias quis ratione sed ut?
+        </p>
+    </div>
 </main>
+
+
+
+<script th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>
